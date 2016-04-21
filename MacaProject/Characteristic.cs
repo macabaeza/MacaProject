@@ -9,6 +9,7 @@ namespace MacaProject
    
     class Characteristic
     {
+        
         public int IdChar { get; set; }
         public IdCat CategoryId { get; set; }
         public string CharName { get; set; }

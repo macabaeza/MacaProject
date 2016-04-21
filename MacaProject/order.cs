@@ -8,9 +8,24 @@ namespace MacaProject
 {
     class order
     {
-        private int itemPrice;
-        private int itemAmount;
-        private int Total;
-         
+        /// <summary>
+        /// Price of the Items
+        /// </summary>
+        private double itemPrice;
+        private int itemQuantity;
+        private double Total;
+
+        #region Methods
+
+        public double cart (double ItemPrice, int ItemQuantity)
+        {
+            Total = ItemPrice * ItemQuantity;
+            return Total;
+
+        }
+        #endregion
+
     }
+
+}
 }

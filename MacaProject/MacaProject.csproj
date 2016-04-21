@@ -47,7 +47,7 @@
     <Compile Include="Customer.cs" />
     <Compile Include="Categories.cs" />
     <Compile Include="order.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="Item.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

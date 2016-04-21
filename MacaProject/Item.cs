@@ -11,31 +11,32 @@ namespace MacaProject
     /// <summary>
     /// Items for selling in a bookstore
     /// </summary>
-    public class Product
+    public class Item
     {
+        #region variables
+        private static int lastItemId = 0;
+
+        #endregion
         #region Properties
         /// <summary>
         /// title of the Items
         /// </summary>
         /// 
-        public string ItemId { get; set; }
-        public int ItemName { get; set; }
+        public int ItemId { get; private set; }
+        public string ItemName { get; set; }
         /// <summary>
         /// descriptions of the items
         /// </summary>
         public string Itemdescription { get; set; }
-        /// <summary>
-        /// Price of the Items
-        /// </summary>
-        public double ItemPrice { get; set; }
-
-
+       
+        #endregion
+        #region Constructor
+        public Item()
+        {
+           ItemId = ++lastItemId;
+        }
         #endregion
 
-        #region Methods
-
-
-        #endregion
 
     }
 }
