@@ -6,28 +6,33 @@ using System.Threading.Tasks;
 
 namespace MacaProject
 {
-    /// <summary>
-    /// creation of enum 
-    /// </summary>
-         public enum IdCat
+    // creation of enum 
+
+    public enum CatDescription
+
     {
         Book,
         Clothes,
 
     }
-
-    class Categories
+    
+    public class Categories
     {
-        #region
-        // description of category
+        #region variable
+        private static int lastCatId = 0;
+        #endregion
+        public int CatId { get; set; }
+        public CatDescription DescriptionOfCat { get; set; }
+        public int ItemId { get; set; }
+        
+        #region constructor
+        public Categories ()
+        {
+            CatId = ++ lastCatId;
+                
+        }
 
-        public string CatDescription { get; set; }
-        public IdCat CategoryId { get; set; }
-#endregion
-
-
-
-
+        #endregion
 
     }
 }

@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MacaProject
-{
-
+{ 
   
+
     /// <summary>
-    /// Items for selling in a bookstore
+    /// Items for selling, creating a static instance for id
     /// </summary>
     public class Item
     {
@@ -18,17 +18,12 @@ namespace MacaProject
 
         #endregion
         #region Properties
-        /// <summary>
-        /// title of the Items
-        /// </summary>
-        /// 
-        public int ItemId { get; private set; }
+        // Items Id 
+        public int ItemId { get; set; }
+        // name of the item
         public string ItemName { get; set; }
-        /// <summary>
-        /// descriptions of the items
-        /// </summary>
-        public string Itemdescription { get; set; }
-       
+        //descriptions of the items
+        public string ItemDescription { get; set; }
         #endregion
         #region Constructor
         public Item()
@@ -36,6 +31,7 @@ namespace MacaProject
            ItemId = ++lastItemId;
         }
         #endregion
+       
 
 
     }
