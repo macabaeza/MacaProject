@@ -13,7 +13,7 @@ namespace MacaProject
         public static int LastIdChart = 0;
         #endregion
         public int IdChar { get; set; }
-        public IdCat CategoryId { get; set; }
+        public int CategoryId { get; set; }
         public string CharName { get; set; }
         public int CharValue { get; set; }
         #region constructor

@@ -10,6 +10,7 @@ namespace MacaProject
     {
         #region variable
         public static List<Item> items = new List<Item>();
+        #endregion
 
         /// <summary>
         /// create a new item
@@ -17,7 +18,7 @@ namespace MacaProject
         /// <param name="itemName">name item</param>
         /// <param name="descriptionId">description for Item</param>
         /// <returns>new Item</returns>
-        public static Item CreateItem (int itemId, string itemName, string descriptionId)
+        public static Item CreateItem(int itemId, string itemName, string descriptionId)
         {
             var item = new Item
             {
@@ -30,5 +31,4 @@ namespace MacaProject
         }
 
     }
-
 }

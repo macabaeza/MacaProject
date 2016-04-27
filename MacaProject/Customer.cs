@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 namespace MacaProject
 {
     public enum CustomerPayment
+    {
+
+    }
     
 /// <summary>
 /// this is about bookstore customer account
@@ -30,7 +33,7 @@ namespace MacaProject
 
         #endregion
         #region Methods
-        public 
+        //public 
         #endregion
     }
 }

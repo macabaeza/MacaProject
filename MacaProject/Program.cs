@@ -14,17 +14,16 @@ namespace MacaProject
             string option;
             do
             {
-                Console.WriteLine("1. Create an Id");
-                Console.WriteLine("2. Name ");
-                Console.WriteLine("3. Description");
-                Console.WriteLine("4. Print Id ");
+                Console.WriteLine("1. Name ");
+                Console.WriteLine("2. Description");
+                Console.WriteLine("3. Print Id ");
                 Console.WriteLine("0. Exit");
 
                 option = Console.ReadLine();
                 switch (option)
                 {
                     case "1":
-                        Console.Write("What is the Id Number?");
+                        Console.Write("What is the Item name?");
                         var ItemId = Console.ReadLine();
 
                         var Item1 = Factory.CreateItem(123, " El Principito", " In 2000 Harcourt proudly reissued Antoine de Saint-Exupéry's masterpiece, The Little Prince, in a sparkling new format.");
@@ -38,7 +37,7 @@ namespace MacaProject
                     case "3":
                         break;
                     case "4":
-                        PrintItems();
+                        //PrintItems();
                         break;
                     case "0":
                         Console.WriteLine("Good bye!");
@@ -47,7 +46,7 @@ namespace MacaProject
                     default:
                         break;
                 }
-            } while ( option!= "0" );
+            } while (option != "0");
         }
 
         static void PrintItems()
@@ -62,3 +61,4 @@ namespace MacaProject
             }
         }
     }
+}
