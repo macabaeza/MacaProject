@@ -14,22 +14,24 @@ namespace MacaProject
             string option;
             do
             {
-                Console.WriteLine("1. Name ");
-                Console.WriteLine("2. Description");
-                Console.WriteLine("3. Print Id ");
+                Console.WriteLine("1.Item name");
+                Console.WriteLine("2.Item id");
+                Console.WriteLine("3. Item description");
+                Console.WriteLine("4. Item price");
+                Console.WriteLine("5. Print Items");
                 Console.WriteLine("0. Exit");
 
                 option = Console.ReadLine();
                 switch (option)
                 {
                     case "1":
-                        Console.Write("What is the Item name?");
-                        var ItemId = Console.ReadLine();
+                        Console.Write("What is the name of Item?");
+                        var itemName = Console.ReadLine();
 
-                        var Item1 = Factory.CreateItem(123, " El Principito", " In 2000 Harcourt proudly reissued Antoine de Saint-Exupéry's masterpiece, The Little Prince, in a sparkling new format.");
+                        var item1 = Factory.CreateItem(itemName, 123, " In 2000 Harcourt proudly reissued Antoine de Saint-Exupéry's masterpiece.", 123);
 
-                        Console.WriteLine("Item Id: {0}, name:{1}, description: {2}",
-                            Item1.ItemId, Item1.ItemName, Item1.ItemDescription);
+                        Console.WriteLine(" Item name:{0},Item id: {1},Item description:{2}, Item price: {3}",
+                             item1.ItemName, item1.ItemId, item1.ItemDescription, item1.ItemPrice);
 
                         break;
                     case "2":
@@ -49,16 +51,16 @@ namespace MacaProject
             } while (option != "0");
         }
 
-        static void PrintItems()
+        //static void PrintItems()
 
-        {
-            foreach (var item in Factory.items)
+       // {
+       //     foreach (var item in Factory.items)
 
-            {
-                Console.WriteLine("Id: {0}, Name: {1}",
-                    item.ItemId, item.ItemName);
+       //     {
+       //         Console.WriteLine("Id: {0}, Name: {1}",
+       //            item.ItemId, item.ItemName);
 
-            }
-        }
+      //      }
+      //}
     }
 }

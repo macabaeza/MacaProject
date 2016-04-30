@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MacaProject
 {
-    class Department
+    class SubCategories
     {
         public string DepCat { get; set; }
     }

@@ -57,7 +57,7 @@
     <Compile Include="Characteristic.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Categories.cs" />
-    <Compile Include="Department.cs" />
+    <Compile Include="SubCategories.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="FactoryModel.cs" />
     <Compile Include="order.cs" />

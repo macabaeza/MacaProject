@@ -18,12 +18,13 @@ namespace MacaProject
 
         #endregion
         #region Properties
-        // Items Id 
-        public int ItemId { get; set; }
         // name of the item
         public string ItemName { get; set; }
+        // Items Id 
+        public int ItemId { get; set; }
         //descriptions of the items
         public string ItemDescription { get; set; }
+        public double ItemPrice { get; set; }
         #endregion
         #region Constructor
         public Item()

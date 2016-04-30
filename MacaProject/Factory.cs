@@ -9,23 +9,29 @@ namespace MacaProject
     public static class Factory
     {
         #region variable
-        public static List<Item> items = new List<Item>();
+        private static FactoryModel db = new FactoryModel();
         #endregion
-
-        /// <summary>
-        /// create a new item
-        /// </summary>
-        /// <param name="itemName">name item</param>
-        /// <param name="descriptionId">description for Item</param>
-        /// <returns>new Item</returns>
-        public static Item CreateItem(int itemId, string itemName, string descriptionId)
+/// <summary>
+/// Create a new Item
+/// </summary>
+/// <param name="itemName">Name of the item</param>
+/// <param name="itemId">Id of the  item</param>
+/// <param name="itemDescription">Description of thr item</param>
+/// <param name="itemPrice">Price of the item</param>
+/// <returns>a new item</returns>
+        
+            // creating the method
+        public static Item CreateItem(  string itemName, int itemId, string itemDescription, double itemPrice)
         {
             var item = new Item
             {
                 ItemName = itemName,
-                ItemDescription = descriptionId
+                ItemId = itemId,
+                ItemDescription = itemDescription,
+                ItemPrice = itemPrice,
             };
-            items.Add(item);
+            db.Items.Add(item);
+            db.SaveChanges();
             return item;
 
         }
