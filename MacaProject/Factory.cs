@@ -21,7 +21,7 @@ namespace MacaProject
 /// <returns>a new item</returns>
         
             // creating the method
-        public static Item CreateItem(  string itemName, int itemId, string itemDescription, double itemPrice)
+        public static Item CreateItem (string itemName, int itemId, string itemDescription, double itemPrice)
         {
             var item = new Item
             {

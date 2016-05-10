@@ -1,39 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MacaProject
 {
-    public enum CustomerPayment
-    {
-
-    }
+   
     
 /// <summary>
-/// this is about bookstore customer account
+/// this is about Amazon customer account
 /// </summary>
     public class Customer
     {
 
         #region Properties
         /// <summary>
-        /// Account number for the account
+        /// Properties for the Customer
         /// </summary>
-        public int CustomerId { get; set; }
+       [Key]
+        public int CustomerId { get; private set; }
         /// Account name for the account
-        /// </summary>
-        public String CustomerName { get; set; }
-        /// Account Email for the account
-        /// </summary>
-        public string CustomerAddress { get; set; }
-        /// <summary>
-        
+        public String Name { get; set; }
+        public int SSN { get; set; }
+        public string Address { get; set; }
+        public string EmailAddress { get; set; }
+        // one customer many orders
+        public virtual ICollection<order> Orders { get; set; }
 
         #endregion
-        #region Methods
-        //public 
-        #endregion
+
     }
 }

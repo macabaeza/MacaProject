@@ -1,25 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MacaProject
-{
-   
-    class Characteristic
+{  
+   public class Characteristic
     {
         #region variable
-        public static int LastIdChart = 0;
+        public static int LastIdCharacteristic = 0;
         #endregion
-        public int IdChar { get; set; }
-        public int CategoryId { get; set; }
-        public string CharName { get; set; }
-        public int CharValue { get; set; }
+        [Key]
+        public int IdCharacteristic { get; set; }
+        public string CharacteristicName { get; set; }
+        public int CharacteristicValue { get; set; }
+        // building a relationship Btw categories and Characteristics
+        public virtual Categories categories { get; set; }
+        
+        
         #region constructor
         public Characteristic()
         {
-            IdChar = ++LastIdChart;
+            IdCharacteristic = ++LastIdCharacteristic;
 
         }
         #endregion

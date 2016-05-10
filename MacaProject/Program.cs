@@ -14,11 +14,9 @@ namespace MacaProject
             string option;
             do
             {
-                Console.WriteLine("1.Item name");
-                Console.WriteLine("2.Item id");
-                Console.WriteLine("3. Item description");
-                Console.WriteLine("4. Item price");
-                Console.WriteLine("5. Print Items");
+                Console.WriteLine("1.Create an Item");
+                Console.WriteLine("2.Order Item");
+                Console.WriteLine("3. Print Items");
                 Console.WriteLine("0. Exit");
 
                 option = Console.ReadLine();
@@ -27,14 +25,18 @@ namespace MacaProject
                     case "1":
                         Console.Write("What is the name of Item?");
                         var itemName = Console.ReadLine();
-
-                        var item1 = Factory.CreateItem(itemName, 123, " In 2000 Harcourt proudly reissued Antoine de Saint-Exupéry's masterpiece.", 123);
+                        Console.Write("What is the description of the item?");
+                        var itemDescription = Console.ReadLine();
+                        Console.Write("What is the price of the Item");
+                        var itemPrice = Console.ReadLine();
+                        var item1 = Factory.CreateItem(itemName, 123, itemDescription, 123);
 
                         Console.WriteLine(" Item name:{0},Item id: {1},Item description:{2}, Item price: {3}",
                              item1.ItemName, item1.ItemId, item1.ItemDescription, item1.ItemPrice);
 
                         break;
                     case "2":
+                        //Console.Write("What is the name of the item?");
                         break;
                     case "3":
                         break;
@@ -51,16 +53,16 @@ namespace MacaProject
             } while (option != "0");
         }
 
-        //static void PrintItems()
+       // static void PrintItems()
 
-       // {
-       //     foreach (var item in Factory.items)
+        //{
+         //   foreach (var item in Factory.items)
 
-       //     {
-       //         Console.WriteLine("Id: {0}, Name: {1}",
-       //            item.ItemId, item.ItemName);
-
-      //      }
-      //}
+         //   {
+         //       Console.WriteLine("Id: {0}, Name: {1}",
+           //        item.ItemId, item.ItemName);
+//
+  //          }
+ //     }
     }
 }
