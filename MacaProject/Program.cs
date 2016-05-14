@@ -23,11 +23,11 @@ namespace MacaProject
                 switch (option)
                 {
                     case "1":
-                        Console.Write("What is the name of Item?");
+                        Console.Write("What is the name of Item? ");
                         var itemName = Console.ReadLine();
-                        Console.Write("What is the description of the item?");
+                        Console.Write("What is the description of the item? ");
                         var itemDescription = Console.ReadLine();
-                        Console.Write("What is the price of the Item");
+                        Console.Write("What is the price of the Item? ");
                         var itemPrice = Console.ReadLine();
                         var item1 = Factory.CreateItem(itemName, 123, itemDescription, 123);
 

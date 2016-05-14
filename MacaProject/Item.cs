@@ -31,7 +31,7 @@ namespace MacaProject
         public virtual Categories Categories { get; set; }
         // creation of multiples characteristic for one item
         public virtual ICollection<Characteristic> Characteristics { get; set; }
-
+        
 
 
         #endregion

@@ -21,7 +21,8 @@ namespace MacaProject
 /// <returns>a new item</returns>
         
             // creating the method
-        public static Item CreateItem (string itemName, int itemId, string itemDescription, double itemPrice)
+        public static Item CreateItem (string itemName, int itemId,
+            string itemDescription, double itemPrice, Customer customer)
         {
             var item = new Item
             {
@@ -29,6 +30,7 @@ namespace MacaProject
                 ItemId = itemId,
                 ItemDescription = itemDescription,
                 ItemPrice = itemPrice,
+                Customer = customer
             };
             db.Items.Add(item);
             db.SaveChanges();

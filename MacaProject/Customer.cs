@@ -27,7 +27,7 @@ namespace MacaProject
         public string Address { get; set; }
         public string EmailAddress { get; set; }
         // one customer many orders
-        public virtual ICollection<order> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
 
         #endregion
 

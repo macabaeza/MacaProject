@@ -16,6 +16,6 @@ namespace MacaProject
         public virtual Customer customer { get; set; }
         public virtual ICollection<Item> Items { get; set; }
         public virtual shoppingCartDetail shoppingCartDetail { get; set; }
-
+        #endregion
     }
 }

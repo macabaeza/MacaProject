@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace MacaProject
 {
-    public class order
+    public class Order
     {
         [Key]
         public int OrderId { get; set; }
-        public decimal Total { get; set; }
+        public double Total { get; set; }
         public virtual Customer Customer { get; set; }
         // an order has many order details
-        public virtual ICollection<OrderDetail> OrderDetail { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
 
         
 
