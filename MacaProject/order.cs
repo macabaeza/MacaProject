@@ -11,7 +11,10 @@ namespace MacaProject
     {
         [Key]
         public int OrderId { get; set; }
+
         public double Total { get; set; }
+        
+        //order is associated to one customer
         public virtual Customer Customer { get; set; }
         // an order has many order details
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }

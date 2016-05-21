@@ -21,11 +21,14 @@ namespace MacaProject
         /// </summary>
        [Key]
         public int CustomerId { get; private set; }
-        /// Account name for the account
-        public String Name { get; set; }
-        public int SSN { get; set; }
+        // Account name for the account
+
+        public string Name { get; set; }
+
         public string Address { get; set; }
+
         public string EmailAddress { get; set; }
+        
         // one customer many orders
         public virtual ICollection<Order> Orders { get; set; }
 

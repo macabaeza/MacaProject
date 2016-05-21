@@ -9,34 +9,52 @@ namespace MacaProject
     public static class Factory
     {
         #region variable
-        private static FactoryModel db = new FactoryModel();
+        public static FactoryModel db = new FactoryModel();
         #endregion
-/// <summary>
-/// Create a new Item
-/// </summary>
-/// <param name="itemName">Name of the item</param>
-/// <param name="itemId">Id of the  item</param>
-/// <param name="itemDescription">Description of thr item</param>
-/// <param name="itemPrice">Price of the item</param>
-/// <returns>a new item</returns>
+
+
+        public static Customer FindCustomer(string emailAddress)
+        {
+            return db.Customers.Where(
+                 c => c.EmailAddress == emailAddress)
+                 .FirstOrDefault();
+        }
+        public static Customer CreateCustomer(string name, string emailAddress)
+        {
+            var customer = new Customer
+            {
+                Name = name,
+                EmailAddress = emailAddress
+            };
+            db.Customers.Add(customer);
+            db.SaveChanges();
+            return customer;
+        }
+        /// <summary>
+        /// Creating an Item
+        /// </summary>
+        /// <param name="itemName">Item Name</param>
+        /// <param name="itemDescription">item Description</param>
+        /// <param name="categoryofItem">Item Category</param>
         
-            // creating the method
-        public static Item CreateItem (string itemName, int itemId,
-            string itemDescription, double itemPrice, Customer customer)
+       /// <returns>New Item</returns>
+
+        public static Item CreateItem (string itemName, string itemDescription, 
+            ItemCategory categoryofItem, Customer customer)
         {
             var item = new Item
             {
                 ItemName = itemName,
-                ItemId = itemId,
                 ItemDescription = itemDescription,
-                ItemPrice = itemPrice,
+                categoryofItem = categoryofItem,
                 Customer = customer
+                
             };
+
             db.Items.Add(item);
             db.SaveChanges();
             return item;
 
         }
-
     }
 }

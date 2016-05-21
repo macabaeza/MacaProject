@@ -12,9 +12,13 @@ namespace MacaProject
         #region
         [Key]
         public int ShoppingCartId { get; set; }
+
         public decimal SubTotal { get; set; }
+
         public virtual Customer customer { get; set; }
+
         public virtual ICollection<Item> Items { get; set; }
+
         public virtual shoppingCartDetail shoppingCartDetail { get; set; }
         #endregion
     }
