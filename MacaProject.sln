@@ -5,6 +5,21 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacaProject", "MacaProject\MacaProject.csproj", "{0C72DF7D-8F8D-4805-A6E1-F289B32F3AB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MacaProject1UI", "MacaProject1UI\MacaProject1UI.csproj", "{D7D08857-355A-4B4D-A158-70A08CDED5E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{95528671-E03B-41B8-B6DF-8E5A49946E81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{5B0A7A89-1939-4148-A4F4-31F82CF3DCCD}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1 = PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{9C7A3381-AA4D-4190-92B2-164E5B9472E7}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Templates\MacaProject1UI.json = PublishScripts\Templates\MacaProject1UI.json
+		PublishScripts\Templates\MacaProject1UI.param.dev.json = PublishScripts\Templates\MacaProject1UI.param.dev.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +30,16 @@ Global
 		{0C72DF7D-8F8D-4805-A6E1-F289B32F3AB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C72DF7D-8F8D-4805-A6E1-F289B32F3AB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C72DF7D-8F8D-4805-A6E1-F289B32F3AB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7D08857-355A-4B4D-A158-70A08CDED5E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D08857-355A-4B4D-A158-70A08CDED5E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D08857-355A-4B4D-A158-70A08CDED5E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D08857-355A-4B4D-A158-70A08CDED5E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5B0A7A89-1939-4148-A4F4-31F82CF3DCCD} = {95528671-E03B-41B8-B6DF-8E5A49946E81}
+		{9C7A3381-AA4D-4190-92B2-164E5B9472E7} = {95528671-E03B-41B8-B6DF-8E5A49946E81}
 	EndGlobalSection
 EndGlobal

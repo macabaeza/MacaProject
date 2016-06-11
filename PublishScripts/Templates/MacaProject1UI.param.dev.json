@@ -1,0 +1,29 @@
+{
+  "siteName": {
+    "value": "MacaProject1"
+  },
+  "hostingPlanName": {
+    "value": "MacaProject1Plan"
+  },
+  "siteLocation": {
+    "value": "South Central US"
+  },
+  "sku": {
+    "value": "Free"
+  },
+  "workerSize": {
+    "value": "0"
+  },
+  "siteMode": {
+    "value": "Limited"
+  },
+  "computeMode": {
+    "value": "0"
+  },
+  "subscriptionId": {
+    "value": "35615f53-ca05-439e-9145-23bfe7ea5a10"
+  },
+  "resourceGroup": {
+    "value": "MacaProject2"
+  }
+}

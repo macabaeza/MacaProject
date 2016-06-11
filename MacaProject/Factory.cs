@@ -15,10 +15,16 @@ namespace MacaProject
 
         public static Customer FindCustomer(string emailAddress)
         {
+            if (string.IsNullOrEmpty (emailAddress))
+            {
+                throw new ArgumentNullException
+                    (" Email address can not be empty");
+            }
             return db.Customers.Where(
                  c => c.EmailAddress == emailAddress)
                  .FirstOrDefault();
         }
+
         public static Customer CreateCustomer(string name, string emailAddress)
         {
             var customer = new Customer

@@ -11,7 +11,7 @@ namespace MacaProject
 
     {
         Book,
-        Clothes,
+        Clothe,
 
     }
     /// <summary>
